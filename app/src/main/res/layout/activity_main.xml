@@ -4,15 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner_unidades"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_valor1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_convertir"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_unidades"
+        app:layout_constraintEnd_toStartOf="@+id/textView_equal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_valor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:lines="1"
+            android:text="@string/_Cero"
+            android:textSize="24sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner_valor1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayout_valor1"
+        app:layout_constraintStart_toStartOf="@+id/inputLayout_valor1"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_valor1" />
+
+    <TextView
+        android:id="@+id/textView_equal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_igual"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/inputLayout_valor1"
+        app:layout_constraintEnd_toStartOf="@+id/inputLayout_valor2"
+        app:layout_constraintBottom_toTopOf="@id/btn_convertir"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_unidades"
+        app:layout_constraintHorizontal_weight="2"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_valor2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_convertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_unidades"
+        app:layout_constraintStart_toEndOf="@+id/textView_equal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_valor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:lines="1"
+            android:text="@string/_Cero"
+            android:enabled="false"
+            android:textSize="24sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner_valor2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayout_valor2"
+        app:layout_constraintStart_toStartOf="@+id/inputLayout_valor2"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_valor2" />
+
+
+
+    <Button
+        android:id="@+id/btn_convertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,31 @@
     <string name="app_name">AppConversorDeUnidades</string>
     <string name="_Cero">0</string>
     <string name="_igual">=</string>
+    <string name="convertir">Convertir</string>
+
+    <string-array name="unidades">
+        <item>Longitud</item>
+        <item>Masa</item>
+        <item>Tiempo</item>
+    </string-array>
+
+    <string-array name="longitud">
+        <item>Kilometro</item>
+        <item>Metro</item>
+        <item>Centimetro</item>
+        <item>Milimetro</item>
+    </string-array>
+
+    <string-array name="masa">
+        <item>Kilogramo</item>
+        <item>Gramo</item>
+        <item>Miligramo</item>
+    </string-array>
+
+    <string-array name="tiempo">
+        <item>Día</item>
+        <item>Hora</item>
+        <item>Minuto</item>
+        <item>Segundo </item>
+    </string-array>
 </resources>
